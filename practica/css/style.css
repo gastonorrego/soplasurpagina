@@ -1,0 +1,107 @@
+body{
+    margin: 0;
+    --transform: scale(1.5);
+}
+.background-login {
+   
+    
+  background-image: url('fondo3.jpg');
+  background-size:cover;
+
+
+}
+
+
+
+.titulo{
+  
+    display:flex;
+    justify-content: left;
+    text-decoration: none;
+    }
+    
+
+
+.soplasur {
+
+    font-size: 5rem;
+    font-family: fantasy;
+    color: whitesmoke;
+}
+
+.titulo2{
+ display: flex;
+ justify-content: center;
+ color: white;
+ text-shadow: 2px 2px 2px black;
+ 
+
+
+}
+
+.quienes{
+    text-align: center;
+    font-size: 4rem;
+}
+
+.logo{
+    width: 8rem;
+ }
+
+ .bg-dark{
+    text-align: center;
+}
+
+.nombre{
+    color: black;
+}
+
+.parrafo{
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    font-size: 2rem;
+    font-family: fantasy;
+    color:whitesmoke;
+    text-shadow: 2px 2px 2px black;
+    
+}
+
+.boton{
+
+   background-color: rgb(76, 156, 76);
+}
+.carrousel{
+   
+    display: flex;
+    justify-content: center;
+}
+.carrousel-items{
+    display: flex;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    padding: 110px 0px;
+
+}
+
+.carrousel-item{
+    width: 200px;
+    height:200px;
+}
+
+.carrousel-item img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.carrousel-item:hover{
+   transform: var(--transform);
+    
+}
+
+.carrousel-item button{
+
+   display: flex;
+   justify-content: center;
+}
