@@ -2,8 +2,25 @@
 
 $('#carrousel').fadeIn(1500);
 
+const carroDeCompras = () =>{
+   
+    carroCompraPadre = document.querySelector('.padre')
+    carroCompra = document.createElement('div')
+    carroCompra.innerHTML  = 'producto precio cantidad';
+    carroCompraPadre.appendChild(carroCompra);
 
-const carrousel =  document.querySelector('.carrousel-items');
+    
+}
+
+
+//const carrousel =  document.querySelector('.carrousel-items');
+const carrouselItem = document.querySelector('.carrousel-item')
+
+const padre = document.querySelector('#gorra');
+const carrito2 = document.createElement('div');
+
+
+
 
 let intervalo = null;
 let step = 1;
@@ -29,47 +46,49 @@ const stop = () =>{
     
 };
 
+
+
+
 carrousel.addEventListener('mouseover',() =>{
     stop();
-    mostrarBoton();
-
+    botonDOM();
+    
 
 });
 
 carrousel.addEventListener('mouseleave',() =>{
     start();
-    $("#botonAñadirCarro").fadeOut(50);
-   
+    borrarBoton();
 });
-const mostrarBoton = () =>{
-    
 
-    var boton = getComputedStyle(document.getElementById("botonAñadirCarro"))
-    if(boton = 1){
-        $("#botonAñadirCarro").fadeIn(500);
-    }
+
+const botonDOM = () =>{
+    
+    carrito2.innerHTML = `<button id ="botonAñadirCarro" class="item-button btn btn-primary addToCart claseRemeras">COMPRAR $3000</button>`;
+   padre.appendChild(carrito2);
+   
 };
-    
 
-const botones = () =>{
-    var boton2 = window.getComputedStyle(document.getElementById("carrousel-item"), ":hover").getPropertyValue("transform");
-    alert(style);
-     $("#botonAñadirCarro").fadeIn(500);
-    
-        
-    
+
+const borrarBoton = () =>{
+   
+    padre.removeChild(carrito2);
+
     
 }
 
+carrito2.onmouseleave = () =>{
+   
+    carroDeCompras();
 
-boton.addEventListener("click",event => {
-  
-  $('#carro').slideDown(1000);
- 
-})
+    
+};
 
 
+
+carrito2.onclick = () =>{
+   
+    carroDeCompras();
+};
 start();
-
-
 
