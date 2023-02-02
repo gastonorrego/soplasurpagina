@@ -60,10 +60,10 @@ body{
     justify-content: center;
     text-align: center;
     display: flex;
-    font-size: 2rem;
+    font-size: 1rem;
     font-family: fantasy;
     color:whitesmoke;
-    text-shadow: 2px 2px 2px black;
+    text-shadow: 1px 1px 1px black;
     
 }
 
